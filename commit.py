@@ -38,7 +38,6 @@ def system_prompt():
     - 使用祈使语气
     - 使用 `feat:` 开头表示功能修改
     - 使用 `fix:` 开头表示 bug 修复
-    - 使用 `docs:` 开头表示文档修改
     - 使用 `refactor:` 开头表示代码重构
 
     ## Example
