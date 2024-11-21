@@ -90,7 +90,11 @@ if __name__ == "__main__":
     if return_code != 0:
         log("Failed to get git status", LogLevel.ERROR)
         sys.exit(1)
-    log(f"We will commit the following files: \n{files}", LogLevel.INFO)
+    if files is None or len(files) == 0:
+        log("No files to commit, we will exit now...", LogLevel.INFO)
+        sys.exit(0)
+    else:
+        log(f"We will commit the following files: \n{files}", LogLevel.INFO)
     
     log("Now we will generate the diff messages...", LogLevel.INFO)
     return_code, diff_message = get_git_diff_staged()
