@@ -10,6 +10,12 @@ Using Ollama to generate the commit message.
 2. `ollama pull qwen2.5-coder:7b`
 3. `pip install -r requirements.txt`
 
+## Customize
+
+```
+export AC_OLLAMA_URL='http://your.ollama.server.url'
+export AC_OLLAMA_MODEL='your.ollama.model.name'
+```
  
 ## Usage
 
