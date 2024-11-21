@@ -62,7 +62,7 @@ def log(message, level=LogLevel.INFO):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="AI assistant for git commit")
     parser.add_argument("-m", "--message", required=False, help="The commit message")
-    parser.add_argument("-a", "--add", action="store_false", help="Add all files to git")
+    parser.add_argument("-a", "--add", action="store_true", help="Add all files to git")
     parser.add_argument("-v", "--verbose", action="store_true", help="Log level, default is INFO")
     args = parser.parse_args()
 
