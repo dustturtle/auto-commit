@@ -44,7 +44,7 @@ def system_prompt():
     ```
     Assistant:
     ```
-    feat/fix/docs/refactor: [简洁明了的提交日志]
+    feat: [简洁明了的提交日志]
     ```
 
     - Locale: zh-cn
