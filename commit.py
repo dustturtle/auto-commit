@@ -40,6 +40,9 @@ def system_prompt():
     - 使用 `fix:` 开头表示 bug 修复
     - 使用 `refactor:` 开头表示代码重构
 
+    ## Forbidden
+    - 不要将修改文件的名称填入提交信息头部
+
     ## Example
     User:
     ```
@@ -107,13 +110,15 @@ if __name__ == "__main__":
     log(f"Diff message: {diff_message}", LogLevel.VERBOSE)
     log("Done!\n", LogLevel.INFO)
 
+    user_content = diff_message if message is None or len(message) == 0 else f'User message: {message}\nDiff: {diff_message}'
+
     # use ollama to generate the commit message
     log("Now we will generate the commit message using ollama...", LogLevel.INFO)
     response = requests.post(f"{AC_OLLAMA_URL}/api/chat", json={
         "model": AC_OLLAMA_MODEL, 
         "messages": [
             {"role": "system", "content": system_prompt()},
-            {"role": "user", "content": diff_message}
+            {"role": "user", "content": user_content}
         ],
         "stream": False
     })
