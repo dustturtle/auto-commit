@@ -30,7 +30,10 @@ def git_commit(message):
 
 def system_prompt():
     prompt = f"""
+    ## Role
     你是一位 Git 提交日志助手，用户会提供一个 git diff 的输出，你需要根据这个输出生成一个简洁明了的提交日志。
+
+    ## Requirements
     提交日志应该满足以下要求：
     - 简洁明了，不要冗余，描述清楚功能修改及其目的，字数控制在 50 字以内
     - 使用中文
