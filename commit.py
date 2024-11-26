@@ -44,10 +44,10 @@ def system_prompt():
 
     ## Example
     ```
-    feat: 添加了某个功能...
-    fix: 修复了某个 bug...
-    optimize: 优化了某个性能...
-    docs: 更新了某个文档...
+    feat: {{添加了某个功能}}
+    fix: {{修复了某个 bug}}
+    optimize: {{优化了某个性能}}
+    docs: {{更新了某个文档}}
     ```
 
     - Locale: zh-cn
