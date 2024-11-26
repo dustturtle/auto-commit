@@ -43,13 +43,11 @@ def system_prompt():
         - 使用 `docs:` 开头表示文档相关
 
     ## Example
-    User:
     ```
-    diff --git ...
-    ```
-    Assistant:
-    ```
-    feat: 简洁明了的提交日志
+    feat: 添加了某个功能...
+    fix: 修复了某个 bug...
+    optimize: 优化了某个性能...
+    docs: 更新了某个文档...
     ```
 
     - Locale: zh-cn
