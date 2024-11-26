@@ -36,12 +36,10 @@ def system_prompt():
     - 使用中文
     - 使用现在时
     - 使用祈使语气
-    - 使用 `feat:` 开头表示功能修改
-    - 使用 `fix:` 开头表示 bug 修复
-    - 使用 `refactor:` 开头表示代码重构
-
-    ## Forbidden
-    - 不要将修改文件的名称填入提交信息头部
+    - 使用特定的 commit 类型开头，保持提交信息头部简洁
+        - 使用 `feat:` 开头表示功能修改
+        - 使用 `fix:` 开头表示 bug 修复
+        - 使用 `refactor:` 开头表示代码重构
 
     ## Example
     User:
