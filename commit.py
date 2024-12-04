@@ -110,7 +110,14 @@ if __name__ == "__main__":
     log(f"Diff message: {diff_message}", LogLevel.VERBOSE)
     log("Done!\n", LogLevel.INFO)
 
-    user_content = diff_message if message is None or len(message) == 0 else f'User message: {message}\nDiff: {diff_message}'
+    user_content = f'''
+    User message:
+    {message or ""}
+    Files:
+    {files}
+    Diff:
+    {diff_message if len(diff_message) < 10000 else ""}
+    '''
 
     # use ollama to generate the commit message
     log("Now we will generate the commit message using ollama...", LogLevel.INFO)
